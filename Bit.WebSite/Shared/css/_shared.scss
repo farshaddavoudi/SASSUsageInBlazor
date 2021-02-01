@@ -1,0 +1,150 @@
+﻿@import '_mixins.scss';
+
+// Shared Styles
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('/font/Axiforma/Kastelov - Axiforma Regular.otf');
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('/font/Axiforma/Kastelov - Axiforma Medium.otf');
+    font-weight: 500; //Medium
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('/font/Axiforma/Kastelov - Axiforma Bold.otf');
+    font-weight: bold; //700
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('/font/Axiforma/Kastelov - Axiforma SemiBold.otf');
+    font-weight: 600; //Semi-Bold
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('/font/Axiforma/Kastelov - Axiforma Medium Italic.otf');
+    font-style: italic; //Medium-Italic
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.textbox { /* Remove it after component level css worked!*/
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 35px;
+    height: 64px;
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 14px 20px;
+}
+
+.textarea-input { /* Remove it after component level css worked!*/
+    font-family: Arial;
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 2px 20px 14px 20px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+
+img {
+    border-radius: rem(10px);
+}
+
+.button-primary {
+    @include primaryButton();
+}
+
+.subtitle {
+    @include subtitleText($colorSubTitle);
+}
+
+.description {
+    @include descriptionText($colorDescriptionTextPrimary);
+}
+
+.description-lg {
+    @include descriptionText();
+    font-size: 1.25em;
+    line-height: rem(48px);
+}
+
+.description-md {
+    @include descriptionText();
+    font-size: 1rem;
+}

@@ -1,0 +1,63 @@
+﻿@using System.ComponentModel.DataAnnotations
+<div class="component-wrapper">
+    <h5 class="start"> START </h5>
+
+    <TitleBox TitleText="Work with us" />
+
+    <div class="form-wrapper">
+        <EditForm Model="@_message" OnValidSubmit="HandleMessageSubmit">
+            <DataAnnotationsValidator />
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <label for="name" class="text-label"> Name * </label>
+                    <InputText id="name" class="textbox" @bind-Value="_message.Name" />
+                    <ValidationMessage For="() => _message.Name" />
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="email" class="text-label"> Email * </label>
+                    <InputText id="email" class="textbox" @bind-Value="_message.Email" />
+                    <ValidationMessage For="() => _message.Email" />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-wrapper about-project">
+                    <label for="about" class="text-label"> Tell Us About Your Project </label>
+                    <InputTextArea id="about" class="textarea-input" rows="5" @bind-Value="_message.AboutProject" />
+                    <ValidationMessage For="()=> _message.AboutProject" />
+                </div>
+            </div>
+
+
+            <div class="form-button-wrapper">
+                <button type="submit" class="button-primary">Send</button>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+
+
+@code {
+    MessageDto _message = new();
+
+    public class MessageDto
+    {
+        [Required]
+        public string Name { get; set; }
+
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        [Required]
+        public string AboutProject { get; set; }
+    }
+
+    private Task HandleMessageSubmit()
+    {
+        throw new NotImplementedException();
+    }
+
+}

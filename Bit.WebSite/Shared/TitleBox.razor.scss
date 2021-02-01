@@ -1,0 +1,46 @@
+﻿@import 'css/_shared.scss';
+
+// Local Mixin(s)
+@mixin titleRectangle($left: 0%, $right: 0%) {
+    position: absolute;
+    height: rem(19px);
+    top: rem(78px);
+    left: $left;
+    right: $right;
+    background: $colorSecondary;
+
+    @include lt-lg {
+        top: rem(66px);
+        height: rem(14px);
+    }
+
+    @include sm {
+        top: rem(39px);
+        height: rem(10px);
+    }
+}
+
+// Styles
+.title {
+    position: relative;
+    height: rem(132px);
+    display: inline-block;
+
+    @include lt-xl {
+        height: rem(109px);
+    }
+
+    @include sm {
+        height: rem(66px);
+    }
+
+    .title-text {
+        @include titleText($colorPrimary);
+    }
+
+    .rectangle {
+        @include titleRectangle();
+    }
+}
+
+

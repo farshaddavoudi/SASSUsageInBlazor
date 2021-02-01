@@ -1,0 +1,45 @@
+﻿@import 'css/_shared.scss';
+
+// Local Variables
+$colorNavItemDark: #404040; //gray
+$colorNavItemLight: #FFFFFF; //light-white
+
+.header-container {
+    width: 83%;
+    margin: em(42px) auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        width: rem(70px);
+        height: rem(70px);
+    }
+
+    .page-links-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+
+        @include sm {
+            display: none;
+        }
+
+        .page-link {
+            text-decoration: none;
+            font-family: $fontPrimary;
+            font-weight: 600;
+            font-size: rem(16px);
+            color: $colorNavItemDark;
+            margin-left: rem(68);
+
+            @include lt-xl {
+                font-size: rem(14px);
+                margin-left: rem(56px);
+            }
+
+            &:hover, &:active {
+                color: $colorOnHover;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+﻿<div class="title">
+    <span class="title-text">
+        @TitleText
+    </span>
+    <div class="rectangle" style="left: @BottomLineLeftStyle; right: @BottomLineRightStyle"></div>
+</div>
+
+@code {
+    [Parameter]
+    public string TitleText { get; set; }
+
+    [Parameter]
+    public string BottomLineLeftStyle { get; set; } = "0";
+
+    [Parameter]
+
+    public string BottomLineRightStyle { get; set; } = "0";
+}

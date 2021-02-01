@@ -1,6 +1,156 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<div class="container">
+    <div class="main-screen">
+        <SiteHeader />
 
-Welcome to your new app.
+        <div class="bit-team-container">
+            <div class="bit-team-content">
 
+                <h1 class="bit-team-title"> Bit Team </h1>
+
+                <h3 class="bit-team-subtitle"> A digital innovation company </h3>
+
+                <p class="bit-team-description">
+                    Baseflow is a digital innovation company with software development at its core. We help out our customers
+                    innovate with designing and building their digital products efficiently with our
+                    Agile mindset and lean processes.
+                </p>
+
+                <button class="button-primary">See Our Showcases</button>
+            </div>
+
+            <div class="bit-team-image-wrapper">
+                <img src="/images/home/mobile_case.png" />
+            </div>
+        </div>
+
+    </div>
+
+    <div class="page-section">
+        <div class="our-projects-section">
+            <div class="our-projects-header-wrapper">
+                <TitleBox TitleText="Our projects" BottomLineLeftStyle="25.65%" />
+            </div>
+
+            <div class="our-projects-container">
+                <div class="our-projects-image-wrapper">
+                    <img src="/images/home/our_projects.png" />
+                </div>
+                <div class="our-projects-content">
+                    <h3 class="our-projects-subtitle">
+                        DoorDash / Food delivery app
+                    </h3>
+                    <p class="our-projects-description">
+                        DoorDash is a technology company that connects people with the best in their cities. They do this by empowering
+                        local businesses and in turn, generate new ways for people to earn, work and live. They started by facilitating
+                        door-to-door delivery, but They see this as just the beginning of connecting people with possibility — easier
+                        evenings, happier days, bigger savings accounts, wider nets and stronger.
+                    </p>
+                </div>
+            </div>
+
+            <div class="see-our-showcases-button-wrapper">
+                <button class="button-primary">See Our Showcases</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-section">
+        <div class="what-we-do-section">
+            <div class="what-we-do-title-wrapper-independent">
+                <TitleBox TitleText="What we do?" BottomLineLeftStyle="64.8%" />
+            </div>
+
+            <div class="what-we-do">
+                <div class="images-container">
+                    <div class="col1">
+                        <div class="what-we-do-image image-placeholder"></div>
+                        <img class="what-we-do-image" src="/images/home/web_development.png?v1" />
+                        <img class="what-we-do-image" src="/images/home/backend_development.png?v1" />
+                    </div>
+                    <div class="col2">
+                        <img class="what-we-do-image" src="/images/home/mobile_development.png?v1" />
+                        <img class="what-we-do-image" src="/images/home/artificial_intelligence.png?v1" />
+                        <img class="what-we-do-image" src="/images/home/support.png?v1" />
+                    </div>
+                    <div class="col3">
+                        <img class="what-we-do-image" src="/images/home/game_development.png?v1" />
+                        <img class="what-we-do-image" src="/images/home/ui_ux_design.png?v1" />
+                        <img class="what-we-do-image" src="/images/home/cloud.png?v1" />
+                    </div>
+                </div>
+
+                <div class="content-container">
+                    <div class="what-we-do-title-wrapper-beside-others">
+                        <TitleBox TitleText="What we do?" BottomLineLeftStyle="64.8%" />
+                    </div>
+
+                    <p class="what-we-do-description">
+                        Our client relationships go beyond technology.
+                        <br />
+                        Enthusiasts to the core, we bring real solutions
+                        to each client’s problems through a deep understanding of their market, solution, and vision.
+                    </p>
+
+                    <div class="services-button-wrapper">
+                        <button class="button-primary">Services</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-section">
+        <div class="who-are-we-section">
+            <div class="what-are-we-title-wrapper-independent">
+                <TitleBox TitleText="Who are we?" BottomLineLeftStyle="30%" />
+            </div>
+
+            <div class="who-are-we-container">
+                <div class="who-are-we-content">
+                    <div class="what-are-we-title-wrapper-independent-beside-others">
+                        <TitleBox TitleText="Who are we?" BottomLineLeftStyle="30%" />
+                    </div>
+                    <p class="who-are-we-description">
+                        I did not find any suitable text for this part, so I had to write this nonsense.I did not
+                        find any suitable text for this part, so I had to write this nonsense.I did not find
+                        any suitable text for this part, so I had to write this nonsense.I did not find
+                        any suitable text for this part, so I had to write this nonsense.
+                    </p>
+                </div>
+                <div class="who-are-we-img-wrapper">
+                    <img src="/images/home/team.png" class="who-are-we-img" />
+                </div>
+            </div>
+
+            <div class="meet-our-team-button-wrapper">
+                <button class="button-primary">Meet Our Team</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-section">
+        <div class="customers-section">
+            <div class="customers-header-wrapper">
+                <TitleBox TitleText="Customers" BottomLineRightStyle="21%" />
+            </div>
+            <div class="the-customers-wrapper">
+                <div>
+                    <img src="/images/home/fynch.png" />
+                </div>
+                <div>
+                    <img src="/images/home/airbnb.png" />
+                </div>
+                <div>
+                    <img src="/images/home/tue.png" />
+                </div>
+                <div>
+                    <img class="customer-img-microsoft" src="/images/home/microsoft.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ContactUs />

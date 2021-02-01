@@ -1,0 +1,97 @@
+﻿@import '_variables.scss';
+@import '_functions.scss';
+@import '_media-queries.scss';
+
+// Global Mixins
+
+@mixin primaryButton {
+    width: rem(205px);
+    height: rem(54px);
+    border-radius: em(3px);
+    background-color: $colorPrimary;
+    color: #FFFFFF;
+    font-family: $fontPrimary;
+    font-style: normal;
+    font-weight: 600;
+    font-size: rem(16px);
+    line-height: rem(26.1px);
+    text-align: center;
+    border:none;
+
+    @include lt-xl {
+        height: rem(51px);
+        font-size: rem(14px);
+        line-height: rem(22.83px);
+    }
+
+    @include sm {
+        width: rem(136px);
+        height: rem(39px);
+        font-size: rem(9px);
+        line-height: rem(14.7px);
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: $colorOnHover;
+    }
+
+
+}
+
+@mixin boldText($color: black) {
+    font-family: $fontPrimary;
+    color: $color;
+    font-style: normal;
+    font-weight: bold;
+}
+
+@mixin titleText($textColor) {
+    @include boldText($textColor);
+    font-size: rem(80px);
+    z-index: 2;
+    position: relative;
+
+    @include lt-xl {
+        font-size: rem(66px);
+    }
+
+    @include sm {
+        font-size: rem(40px);
+    }
+}
+
+
+@mixin subtitleText($textColor) {
+    @include boldText($textColor);
+    font-size: rem(35px);
+    line-height: rem(57.57px);
+
+    @include lt-xl {
+        font-size: rem(29px);
+        line-height: rem(47.7px);
+    }
+
+    @include sm {
+        font-size: rem(19px);
+        line-height: rem(31.25px);
+    }
+}
+
+@mixin descriptionText($textColor: $colorDescriptionTextPrimary) {
+    font-family: $fontPrimary;
+    font-weight: 500;
+    font-size: rem(22px);
+    line-height: rem(35px);
+    color: $textColor;
+
+    @include lt-xl {
+        font-size: rem(20px);
+        line-height: rem(32px);
+    }
+
+    @include sm {
+        font-size: rem(13px);
+        line-height: rem(21px);
+    }
+}

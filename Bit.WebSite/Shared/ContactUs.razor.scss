@@ -1,0 +1,128 @@
+﻿@import 'css/_shared.scss';
+
+// Local Variables
+$colorBackgroundContactUs: #F6F6F6; //white-gray
+
+.component-wrapper {
+    background-color: $colorBackgroundContactUs;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .start {
+        font-family: $fontPrimary;
+        font-style: normal;
+        font-weight: 600;
+        font-size: rem(30px);
+        line-height: rem(49px);
+        color: $colorPrimary;
+        margin: 0;
+        margin-top: rem(150px) !important;
+
+        @include lt-xl {
+            font-size: rem(25px);
+            line-height: rem(40px);
+        }
+
+        @include sm {
+            margin-top: rem(75px) !important;
+        }
+    }
+
+    .form-wrapper {
+        width: 67%;
+
+        @include sm {
+            width: 83%;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+
+            @include sm {
+                flex-direction: column;
+            }
+
+            .input-wrapper {
+                width: 43%;
+                display: flex;
+                flex-direction: column;
+
+                @include sm {
+                    width: 100%;
+                }
+
+                .text-label {
+                    font-family: $fontPrimary;
+                    font-size: rem(22px);
+                    line-height: rem(35px);
+                    color: #404040;
+                    margin: 0 rem(12px);
+
+                    @include lt-xl {
+                        font-size: rem(20px);
+                        line-height: rem(31px);
+                    }
+
+                    @include sm {
+                        font-size: rem(13px);
+                        line-height: rem(21px);
+                        margin-top: rem(15px);
+                        margin-bottom: rem(12px);
+                    }
+                }
+
+                .textbox {
+                    font-family: $fontPrimary;
+                    font-size: rem(22px);
+                    font-weight: 500;
+                    height: rem(64px);
+                    background-color: #FFFFFF;
+                    border: 1px solid #DDDDDD;
+                    box-sizing: border-box;
+                    border-radius: em(3px);
+                    padding: rem(14px) rem(20px);
+
+                    @include lt-xl {
+                        font-size: rem(20px);
+                        height: rem(60px);
+                    }
+
+                    @include sm {
+                        font-size: rem(13px);
+                        height: rem(49px);
+                        margin-bottom: rem(15px);
+                    }
+                }
+            }
+
+            .input-wrapper.about-project {
+                width: 100%;
+                margin-top: em(24px);
+
+                .textarea-input {
+                    font-family: $fontPrimary;
+                    font-weight: 500;
+                    font-size: rem(22px);
+                    line-height: rem(35px);
+                    background-color: #FFFFFF;
+                    border: 1px solid #DDDDDD;
+                    box-sizing: border-box;
+                    border-radius: rem(3px);
+                    padding: rem(2px) rem(20px) rem(14px) rem(20px);
+                }
+            }
+        }
+
+        .form-button-wrapper {
+            text-align: center;
+            margin-top: rem(90px);
+            margin-bottom: rem(150px);
+
+            @include sm {
+                margin-top: rem(40px);
+            }
+        }
+    }
+}
