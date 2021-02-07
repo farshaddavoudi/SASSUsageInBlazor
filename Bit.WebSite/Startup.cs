@@ -24,7 +24,7 @@ namespace Bit.WebSite
         {
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();
-            
+
             else
             {
                 app.UseExceptionHandler("/Error");
