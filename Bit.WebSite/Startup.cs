@@ -17,7 +17,7 @@ namespace Bit.WebSite
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            services.AddRazorPages(opt => opt.RootDirectory = "/Shared");
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
