@@ -63,21 +63,48 @@
             </div>
 
             <div class="what-we-do">
-                <div class="images-container">
-                    <div class="col1">
-                        <div class="what-we-do-image image-placeholder"></div>
-                        <img class="what-we-do-image" src="/images/home/web_development.png?v1" />
-                        <img class="what-we-do-image" src="/images/home/backend_development.png?v1" />
+                <div class="md-hidden">
+                    <div class="images-container">
+                        <div class="col col1">
+                            <div class="what-we-do-image image-placeholder"></div>
+                            <WhatWeDoImage ImageSrc="/images/home/web_development.png?v2" ImageBottomText="Web Development" />
+                            <WhatWeDoImage ImageSrc="/images/home/backend_development.png?v1" ImageBottomText="Backend Development" />
+                        </div>
+                        <div class="col col2">
+                            <WhatWeDoImage ImageSrc="/images/home/mobile_development.png?v2" ImageBottomText="Mobile Development" />
+                            <WhatWeDoImage ImageSrc="/images/home/artificial_intelligence.png?v2" ImageBottomText="Artificial Intelligence" />
+                            <WhatWeDoImage ImageSrc="/images/home/support.png?v2" ImageBottomText="Support" />
+                        </div>
+                        <div class="col col3">
+                            <WhatWeDoImage ImageSrc="/images/home/game_development.png?v2" ImageBottomText="Game Development" />
+                            <WhatWeDoImage ImageSrc="/images/home/ui_ux_design.png?v2" ImageBottomText="UI/UX Design" />
+                            <WhatWeDoImage ImageSrc="/images/home/cloud.png?v2" ImageBottomText="Cloud" />
+                        </div>
                     </div>
-                    <div class="col2">
-                        <img class="what-we-do-image" src="/images/home/mobile_development.png?v1" />
-                        <img class="what-we-do-image" src="/images/home/artificial_intelligence.png?v1" />
-                        <img class="what-we-do-image" src="/images/home/support.png?v1" />
-                    </div>
-                    <div class="col3">
-                        <img class="what-we-do-image" src="/images/home/game_development.png?v1" />
-                        <img class="what-we-do-image" src="/images/home/ui_ux_design.png?v1" />
-                        <img class="what-we-do-image" src="/images/home/cloud.png?v1" />
+
+
+                </div>
+
+                <div class="md-visible">
+                    <div class="images-container">
+                        <div class="col col1">
+                            <WhatWeDoImage ImageSrc="/images/home/support.png?v2" ImageBottomText="Support" />
+                            <WhatWeDoImage ImageSrc="/images/home/cloud.png?v2" ImageBottomText="Cloud" />
+                        </div>
+                        <div class="col col2">
+                            <WhatWeDoImage ImageSrc="/images/home/web_development.png?v2" ImageBottomText="Web Development" />
+                            <WhatWeDoImage ImageSrc="/images/home/backend_development.png?v1" ImageBottomText="Backend Development" />
+
+                        </div>
+                        <div class="col col3">
+                            <WhatWeDoImage ImageSrc="/images/home/mobile_development.png?v2" ImageBottomText="Mobile Development" />
+                            <WhatWeDoImage ImageSrc="/images/home/artificial_intelligence.png?v2" ImageBottomText="Artificial Intelligence" />
+
+                        </div>
+                        <div class="col col4">
+                            <WhatWeDoImage ImageSrc="/images/home/game_development.png?v2" ImageBottomText="Game Development" />
+                            <WhatWeDoImage ImageSrc="/images/home/ui_ux_design.png?v2" ImageBottomText="UI/UX Design" />
+                        </div>
                     </div>
                 </div>
 
@@ -130,23 +157,23 @@
         </div>
     </div>
 
-    <div class="page-section">
+    <div class="page-section last">
         <div class="customers-section">
             <div class="customers-header-wrapper">
                 <TitleBox TitleText="Customers" BottomLineRightStyle="21%" />
             </div>
             <div class="the-customers-wrapper">
                 <div>
-                    <img src="/images/home/fynch.png" />
+                    <Customer ImageSrc="/images/home/fynch.png" CustomerName="Fynch" />
                 </div>
                 <div>
-                    <img src="/images/home/airbnb.png" />
+                    <Customer ImageSrc="/images/home/airbnb.png" CustomerName="AirBnb" />
                 </div>
                 <div>
-                    <img src="/images/home/tue.png" />
+                    <Customer ImageSrc="/images/home/tue.png" CustomerName="TU Eindhoven" />
                 </div>
-                <div>
-                    <img class="customer-img-microsoft" src="/images/home/microsoft.png" />
+                <div class="customer-microsoft">
+                    <Customer ImageSrc="/images/home/microsoft.png" CustomerName="Microsoft" />
                 </div>
             </div>
         </div>

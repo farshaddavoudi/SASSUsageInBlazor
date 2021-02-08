@@ -1,0 +1,12 @@
+﻿<div class="what-we-do-image-wrapper">
+    <img class="what-we-do-image" src="@ImageSrc" title="@ImageBottomText" />
+    <span> @ImageBottomText </span>
+</div>
+
+@code {
+    [Parameter]
+    public string ImageSrc { get; set; }
+
+    [Parameter]
+    public string ImageBottomText { get; set; }
+}

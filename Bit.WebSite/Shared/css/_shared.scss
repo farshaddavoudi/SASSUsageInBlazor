@@ -4,121 +4,73 @@
 
 @font-face {
     font-family: 'Axiforma';
-    src: url('/font/Axiforma/Kastelov - Axiforma Regular.otf');
+    src: url('/font/Axiforma/woff2/Kastelov - Axiforma Regular.woff2') format('woff2'), 
+        url('/font/Axiforma/woff/Kastelov - Axiforma Regular.woff') format('woff'),
+        url('/font/Axiforma/otf/Kastelov - Axiforma Regular.otf');
 }
 
 @font-face {
     font-family: 'Axiforma';
-    src: url('/font/Axiforma/Kastelov - Axiforma Medium.otf');
+    src: url('/font/Axiforma/woff2/Kastelov - Axiforma Medium.woff2') format('woff2'),
+        url('/font/Axiforma/woff/Kastelov - Axiforma Medium.woff') format('woff'),
+        url('/font/Axiforma/otf/Kastelov - Axiforma Medium.otf');
     font-weight: 500; //Medium
 }
 
 @font-face {
     font-family: 'Axiforma';
-    src: url('/font/Axiforma/Kastelov - Axiforma Bold.otf');
+    src: url('/font/Axiforma/woff2/Kastelov - Axiforma Bold.woff2') format('woff2'),
+        url('/font/Axiforma/woff/Kastelov - Axiforma Bold.woff') format('woff'),
+        url('/font/Axiforma/otf/Kastelov - Axiforma Bold.otf');
     font-weight: bold; //700
 }
 
 @font-face {
     font-family: 'Axiforma';
-    src: url('/font/Axiforma/Kastelov - Axiforma SemiBold.otf');
+    src: url('/font/Axiforma/woff2/Kastelov - Axiforma SemiBold.woff2') format('woff2'), 
+        url('/font/Axiforma/woff/Kastelov - Axiforma SemiBold.woff') format('woff'),
+        url('/font/Axiforma/otf/Kastelov - Axiforma SemiBold.otf');
     font-weight: 600; //Semi-Bold
 }
 
 @font-face {
     font-family: 'Axiforma';
-    src: url('/font/Axiforma/Kastelov - Axiforma Medium Italic.otf');
+    src: url('/font/Axiforma/woff2/Kastelov - Axiforma Medium Italic.woff2') format('woff2'), 
+        url('/font/Axiforma/woff/Kastelov - Axiforma Medium Italic.woff') format('woff'), 
+        url('/font/Axiforma/otf/Kastelov - Axiforma Medium Italic.otf');
     font-style: italic; //Medium-Italic
 }
 
+.md-hidden {
+    display: block;
 
-
-
-
-
-
-
-
-
-
-
-.textbox { /* Remove it after component level css worked!*/
-    font-family: Arial;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 35px;
-    height: 64px;
-    background-color: #FFFFFF;
-    border: 1px solid #DDDDDD;
-    box-sizing: border-box;
-    border-radius: 3px;
-    padding: 14px 20px;
+    @include md {
+        display: none;
+    }
 }
 
-.textarea-input { /* Remove it after component level css worked!*/
-    font-family: Arial;
-    background-color: #FFFFFF;
-    border: 1px solid #DDDDDD;
-    box-sizing: border-box;
-    border-radius: 3px;
-    padding: 2px 20px 14px 20px;
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 35px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-}
-
-.valid.modified:not([type=checkbox]) {
-    outline: 1px solid #26b050;
-}
-
-.invalid {
-    outline: 1px solid red;
-}
-
-.validation-message {
-    color: red;
-}
-
-#blazor-error-ui {
-    background: lightyellow;
-    bottom: 0;
-    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+.md-visible {
     display: none;
-    left: 0;
-    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
+
+    @include md {
+        display: block;
+    }
 }
 
-#blazor-error-ui .dismiss {
-    cursor: pointer;
-    position: absolute;
-    right: 0.75rem;
-    top: 0.5rem;
+.sm-hidden {
+    display: block;
+
+    @include sm {
+        display: none;
+    }
+}
+
+.sm-visible {
+    display: none;
+
+    @include sm {
+        display: block;
+    }
 }
 
 

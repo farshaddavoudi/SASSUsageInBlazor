@@ -4,18 +4,18 @@
 @mixin titleRectangle($left: 0%, $right: 0%) {
     position: absolute;
     height: rem(19px);
-    top: rem(78px);
+    top: rem(53px);
     left: $left;
     right: $right;
     background: $colorSecondary;
 
-    @include lt-lg {
-        top: rem(66px);
+    @include lt-xl {
+        top: rem(44px);
         height: rem(14px);
     }
 
     @include sm {
-        top: rem(39px);
+        top: rem(25px);
         height: rem(10px);
     }
 }
@@ -42,5 +42,3 @@
         @include titleRectangle();
     }
 }
-
-

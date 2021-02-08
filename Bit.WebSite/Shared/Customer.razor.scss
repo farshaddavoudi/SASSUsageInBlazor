@@ -1,0 +1,37 @@
+﻿@import 'css/_shared.scss';
+
+.customer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        @include md {
+            width: rem(112px);
+            height: rem(112px);
+        }
+
+        @include sm {
+            width: rem(80px);
+            height: rem(80px);
+        }
+    }
+
+    .customer-name {
+        font-family: $fontPrimary;
+        font-weight: 500;
+        font-size: rem(22px);
+        line-height: rem(35px);
+        text-align: center;
+
+        @include lt-xl {
+            font-size: rem(20px);
+            line-height: rem(31px);
+        }
+
+        @include sm {
+            font-size: rem(13px);
+            line-height: rem(20px);
+        }
+    }
+}

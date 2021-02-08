@@ -1,0 +1,14 @@
+﻿<div class="customer-wrapper">
+    <img src="@ImageSrc" title="@CustomerName" />
+    <div class="customer-name">
+        @CustomerName
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string ImageSrc { get; set; }
+
+    [Parameter]
+    public string CustomerName { get; set; }
+}

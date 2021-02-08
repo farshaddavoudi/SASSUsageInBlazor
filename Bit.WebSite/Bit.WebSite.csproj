@@ -12,22 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\images\home\airbnb.png" />
-    <None Include="wwwroot\images\home\artificial_intelligence.png" />
-    <None Include="wwwroot\images\home\backend_development.png" />
-    <None Include="wwwroot\images\home\cloud.png" />
-    <None Include="wwwroot\images\home\fynch.png" />
-    <None Include="wwwroot\images\home\game_development.png" />
-    <None Include="wwwroot\images\home\microsoft.png" />
-    <None Include="wwwroot\images\home\mobile_case.png" />
-    <None Include="wwwroot\images\home\mobile_development.png" />
-    <None Include="wwwroot\images\home\our_projects.png" />
-    <None Include="wwwroot\images\home\our_projects_mobile.png" />
-    <None Include="wwwroot\images\home\support.png" />
-    <None Include="wwwroot\images\home\team.png" />
-    <None Include="wwwroot\images\home\tue.png" />
-    <None Include="wwwroot\images\home\ui_ux_design.png" />
-    <None Include="wwwroot\images\home\web_development.png" />
     <None Include="wwwroot\images\shared\bit_logo.png" />
   </ItemGroup>
 

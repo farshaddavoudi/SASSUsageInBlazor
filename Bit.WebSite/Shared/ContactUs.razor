@@ -4,7 +4,7 @@
 
     <TitleBox TitleText="Work with us" />
 
-    <div class="form-wrapper">
+    <div id="contactUsForm" class="form-wrapper">
         <EditForm Model="@_message" OnValidSubmit="HandleMessageSubmit">
             <DataAnnotationsValidator />
             <div class="form-row">
@@ -37,8 +37,6 @@
     </div>
 </div>
 
-
-
 @code {
     MessageDto _message = new();
 
@@ -59,5 +57,4 @@
     {
         throw new NotImplementedException();
     }
-
 }
