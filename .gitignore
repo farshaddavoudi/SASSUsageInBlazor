@@ -331,8 +331,7 @@ ASALocalRun/
 
 # CSS files because of SASS builder
 *.css
-!/wwwroot/**/*.css
 
 # JS files because of Typescript builder
 *.js
-!/wwwroot/**/*.js
+*.js.map
