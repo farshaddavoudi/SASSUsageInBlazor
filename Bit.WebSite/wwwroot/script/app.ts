@@ -1,6 +1,14 @@
-﻿// left: 37, up: 38, right: 39, down: 40,
+﻿var btnShowMobileMenu = document.getElementById("btnShowMobileMenu");
+var btnHideMobileMenu = document.getElementById("btnHideMobileMenu");
+var mobileMenu = document.getElementById("mobileMenu");
+
+btnShowMobileMenu.addEventListener("click", disableScroll);
+btnHideMobileMenu.addEventListener("click", enableScroll);
+
+
+// left: 37, up: 38, right: 39, down: 40,
 // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+let keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
 
 function preventDefault(e) {
     e.preventDefault();
@@ -11,6 +19,8 @@ function preventDefaultForScrollKeys(e) {
         preventDefault(e);
         return false;
     }
+
+    return true;
 }
 
 // modern Chrome requires { passive: false } when adding event
@@ -21,11 +31,13 @@ try {
     }));
 } catch (e) { }
 
-var wheelOpt = supportsPassive ? { passive: false } : false;
-var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+let wheelOpt = supportsPassive ? { passive: false } : false;
+let wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
 
 // call this to Disable
 function disableScroll() {
+    btnShowMobileMenu.style.display = 'none';
+    mobileMenu.style.display = 'flex';
     window.addEventListener("DOMMouseScroll", preventDefault, false); // older FF
     window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
     window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
@@ -35,9 +47,11 @@ function disableScroll() {
 
 // call this to Enable
 function enableScroll() {
+    btnShowMobileMenu.style.display = 'block';
+    mobileMenu.style.display = 'none';
     window.removeEventListener('DOMMouseScroll', preventDefault, false);
-    window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
-    window.removeEventListener('touchmove', preventDefault, wheelOpt);
+    //window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
+    //window.removeEventListener('touchmove', preventDefault, wheelOpt);
     window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
     removeStopScrollingClass();
 }
