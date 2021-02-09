@@ -1,4 +1,24 @@
-﻿var btnShowMobileMenu = document.getElementById("btnShowMobileMenu");
+﻿// Carousel
+var emblaNode = document.getElementById("embla");
+const options = { loop: true }
+var embla = (window as any).EmblaCarousel(emblaNode, options);
+
+var arrowNextCarouselSlide = document.getElementById("arrowNextSlide");
+var arrowPrevCarouselSlide = document.getElementById("arrowPrevSlide");
+
+arrowNextCarouselSlide.addEventListener("click", carouselNextSlide);
+arrowPrevCarouselSlide.addEventListener("click", carouselPrevSlide);
+
+function carouselNextSlide() {
+    (embla as any).scrollNext();
+}
+
+function carouselPrevSlide() {
+    (embla as any).scrollPrev();
+}
+
+// Mobile Menu
+var btnShowMobileMenu = document.getElementById("btnShowMobileMenu");
 var btnHideMobileMenu = document.getElementById("btnHideMobileMenu");
 var mobileMenu = document.getElementById("mobileMenu");
 

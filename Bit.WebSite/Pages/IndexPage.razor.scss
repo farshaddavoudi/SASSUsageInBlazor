@@ -126,7 +126,7 @@
     .our-projects-container {
         display: flex;
         flex-direction: row;
-        margin-bottom: rem(67px);
+        margin-bottom: 0;
 
         @include lt-lg {
             flex-direction: column;
@@ -141,7 +141,7 @@
 
             @include lt-lg {
                 width: 100%;
-                margin-bottom: rem(34px);
+                margin-bottom: 0;
             }
 
             @include sm {
@@ -176,6 +176,14 @@
 
             .our-projects-subtitle {
                 @include subtitleText(black);
+
+                @include md {
+                    margin-top: rem(30px);
+                }
+                
+                @include sm {
+                    margin-top: rem(20px);
+                }
             }
 
             .our-projects-description {
@@ -185,6 +193,21 @@
         }
     }
 
+    .carousel-arrows-wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        margin-bottom: rem(40px);
+
+        span {
+            cursor: pointer;
+        }
+
+        .next-slide {
+            margin-left: rem(42px);
+        }
+    }
+    
     .see-our-showcases-button-wrapper {
         text-align: center;
     }
