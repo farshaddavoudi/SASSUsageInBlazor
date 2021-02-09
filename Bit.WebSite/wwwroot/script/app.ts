@@ -50,8 +50,8 @@ function enableScroll() {
     btnShowMobileMenu.style.display = 'block';
     mobileMenu.style.display = 'none';
     window.removeEventListener('DOMMouseScroll', preventDefault, false);
-    //window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
-    //window.removeEventListener('touchmove', preventDefault, wheelOpt);
+    window.removeEventListener((wheelEvent as any), preventDefault, (wheelOpt as any));
+    window.removeEventListener('touchmove', preventDefault, (wheelOpt as any));
     window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
     removeStopScrollingClass();
 }

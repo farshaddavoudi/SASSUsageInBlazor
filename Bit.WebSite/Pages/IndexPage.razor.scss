@@ -65,7 +65,7 @@
 
             @include sm {
                 width: 20%;
-                justify-content: flex-end;
+                justify-content: space-between;
             }
 
             img {
@@ -142,6 +142,10 @@
             @include lt-lg {
                 width: 100%;
                 margin-bottom: rem(34px);
+            }
+
+            @include sm {
+                padding-right: 0;
             }
 
             img {
