@@ -335,3 +335,4 @@ ASALocalRun/
 # JS files because of Typescript builder
 *.js
 *.js.map
+!/wwwroot/**/purejscarousel.js
